@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored = "false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,15 +28,20 @@
 				<div class="card card-sh">
 					<div class="card-header text-center">
 						<p class="fs-3">Add Expense</p>
+						<c:if test="${not empty msg}">
+							<p class="text-center text-success fs-4">${msg}</p>
+							<c:remove var="msg"/>
+						</c:if>
 					</div>
 					<div class="card-body">
-						<form action="addExpense" method="POST">
+						<form action="../addExpense" method="POST">
 							<div class="mb-3">
 								
 								<label>Title</label>
 								<input type="text" name="title" class="form-control"/>
 				
 							</div>
+							
 							
 							<div class="mb-3">
 								
@@ -46,7 +53,7 @@
 							<div class="mb-3">
 								
 								<label>Time</label>
-								<input type="date" name="time" class="form-control"/>
+								<input type="time" name="time" class="form-control"/>
 				
 							</div>
 							

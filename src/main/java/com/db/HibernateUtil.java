@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
-import com.entity.User;
+import com.entity.*;
 
 public class HibernateUtil {
 	
@@ -34,6 +34,7 @@ public class HibernateUtil {
 			cfgConfiguration.setProperties(properties);
 			
 			cfgConfiguration.addAnnotatedClass(User.class);
+			cfgConfiguration.addAnnotatedClass(Expense.class);
 			
 			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfgConfiguration.getProperties()).build();
 			
