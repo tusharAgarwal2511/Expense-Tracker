@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored = "false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,11 +32,15 @@
 
 					<div class="card-header">
 						<p class="text-center fs-3">Login Page</p>
+						<c:if test="${not empty msg}">
+							<p class="text-center text-danger fs-4">${msg}</p>
+							<c:remove var="msg"/>
+						</c:if>
 					</div>
 
 					<div class="card-body">
 
-						<form action="" method="POST">
+						<form action="userLogin" method="POST">
 
 							
 							

@@ -1,13 +1,13 @@
-<%@page import="org.hibernate.SessionFactory"%>
-<%@page import="com.db.HibernateUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Expense Tracker</title>
-<%@include file="components/all_css.jsp"%>
+<title>User Home Page</title>
+<%@include file="../components/all_css.jsp"%>
 
 <style type="text/css">
 
@@ -20,23 +20,19 @@
 </head>
 <body>
 
-
-	
-
-
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="../components/navbar.jsp"%>
 
 	<div id="carouselExampleControls" class="carousel slide"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="images/ex1.jpg" class="d-block w-100" alt="..." style="height: 720px;">
+				<img src="../images/ex1.jpg" class="d-block w-100" alt="..." style="height: 720px;">
 			</div>
 			<div class="carousel-item">
-				<img src="images/ex2.jpg" class="d-block w-100" alt="..." style="height: 720px;">
+				<img src="../images/ex2.jpg" class="d-block w-100" alt="..." style="height: 720px;">
 			</div>
 			<div class="carousel-item">
-				<img src="images/ex3.jpg" class="d-block w-100" alt="..." style="height: 720px;">
+				<img src="../images/ex3.jpg" class="d-block w-100" alt="..." style="height: 720px;">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button"
@@ -50,6 +46,8 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
-
+	
+	
+	
 </body>
 </html>
